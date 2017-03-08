@@ -1,0 +1,12 @@
+## Interface: 11200
+## Title: LFG Filter |cffffffff by Devion
+## Author: Devion
+## Notes: LFG Helper system
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariables: 
+## ModWatcherID: 74
+## ModWatcherVersion: 8
+## Dependencies:
+Instances.lua
+LFGHelper.lua
