@@ -94,4 +94,7 @@ function cleanText(text, instance)
 end
 
 function findClasses(text)
+    -- parse classes/roles from message
+    -- return list
 end
+

@@ -10,3 +10,4 @@
 ## Dependencies:
 Instances.lua
 LFGHelper.lua
+Commands.lua
