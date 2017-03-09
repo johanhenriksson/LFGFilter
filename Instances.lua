@@ -5,6 +5,7 @@ InstanceMap = {
         Short = "DM",
         Keywords = { "dm", "vc", "dead%s*mines" },
         Exclude = { "east", "west", "north", "tribute" },
+        LFG = true,
     },
 
     WailingCaverns = {
@@ -12,6 +13,7 @@ InstanceMap = {
         Short = "WC",
         Keywords = { "wailing%s*caverns", "wc" },
         Exclude = { },
+        LFG = true,
     },
 
     Shadowfang = {
@@ -19,6 +21,7 @@ InstanceMap = {
         Short = "SFK",
         Keywords = { "shadowfang", "sfk" },
         Exclude = { },
+        LFG = true,
     },
 
     Stockades = {
@@ -26,6 +29,7 @@ InstanceMap = {
         Short = "Stockade",
         Keywords = { "stockade", "stock" },
         Exclude = { },
+        LFG = true,
     },
     
     Blackfathom = {
@@ -33,6 +37,7 @@ InstanceMap = {
         Short = "BFD",
         Keywords = { "blackfathom%s*deeps", "bfd", "bdf" },
         Exclude = { },
+        LFG = true,
     },
 
     RazorfenKraul = {
@@ -40,6 +45,7 @@ InstanceMap = {
         Short = "RFK",
         Keywords = { "razorfen%s*kraul", "rfk", "rkf" },
         Exclude = { },
+        LFG = true,
     },
 
     Gnomeregan = {
@@ -47,13 +53,15 @@ InstanceMap = {
         Short = "Gnome",
         Keywords = { "gnomeregan", "gnome%a*" },
         Exclude = { },
+        LFG = true,
     },
 
     Scarlet = {
         Name = "Scarlet Monastery",
         Short = "SM",
-        Keywords = { "scarlet", "sm", "%s+lib", "%s+arm", "cath" },
+        Keywords = { "scarlet", "sm" },
         Exclude = { },
+        LFG = true,
     },
 
     RazorfenDowns = {
@@ -61,6 +69,7 @@ InstanceMap = {
         Short = "RFD",
         Keywords = { "razorfen%s*downs", "rfd" },
         Exclude = { },
+        LFG = true,
     },
 
     Uldaman = {
@@ -68,6 +77,7 @@ InstanceMap = {
         Short = "Ulda",
         Keywords = { "uldaman", "ulda" },
         Exclude = { },
+        LFG = true,
     },
 
     ZulFarrak = {
@@ -75,6 +85,7 @@ InstanceMap = {
         Short = "ZF",
         Keywords = { "zul.?farrak", "zf" },
         Exclude = { },
+        LFG = true,
     },
 
     Maraudon = {
@@ -82,13 +93,15 @@ InstanceMap = {
         Short = "Mara",
         Keywords = { "maraudon", "mara" },
         Exclude = { },
+        LFG = true,
     },
 
     SunkenTemple = {
         Name = "Sunken Temple",
         Short = "ST",
-        Keywords = { "sunken", "%s+st%s+", "%s+st$" },
+        Keywords = { "sunken%s+temple", "%s+st%s+", "%s+st$" },
         Exclude = { },
+        LFG = true,
     },
 
     BlackrockDepths = {
@@ -96,6 +109,7 @@ InstanceMap = {
         Short = "BRD",
         Keywords = { "brd", "blackrock%s+depths", "lava" },
         Exclude = { },
+        LFG = true,
     },
 
     Scholomalance = {
@@ -103,6 +117,7 @@ InstanceMap = {
         Short = "Scholo",
         Keywords = { "scholomalance", "scholo" },
         Exclude = { },
+        LFG = true,
     },
 
     Stratholme = {
@@ -110,6 +125,7 @@ InstanceMap = {
         Short = "Strat",
         Keywords = { "stratholme", "strat" },
         Exclude = { },
+        LFG = true,
     },
 
     LBRS = {
@@ -117,6 +133,7 @@ InstanceMap = {
         Short = "LBRS",
         Keywords = { "lbrs" },
         Exclude = { },
+        LFG = true,
     },
 
     UBRS = {
@@ -124,6 +141,7 @@ InstanceMap = {
         Short = "UBRS",
         Keywords = { "ubrs", "urbs" },
         Exclude = { },
+        LFG = true,
     },
 
     -- TBA
@@ -132,6 +150,7 @@ InstanceMap = {
 --        Short = "DM",
 --        Keywords = { "dm", "tribute" },
 --        Exclude = { "vc", "cleef" },
+--        LFG = true,
 --    },
 --
 
@@ -140,6 +159,7 @@ InstanceMap = {
         Short = "MC",
         Keywords = { "mc", "molten" },
         Exclude = { },
+        LFG = true,
     },
 }
 

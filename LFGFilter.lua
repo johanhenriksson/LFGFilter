@@ -11,8 +11,7 @@ ignoreList = {
     "zf",
 }
 
-local showLfg = false
-local showLfm = true
+LFG_ShowLfg = false
 
 -- helper function to print
 function print(msg)
@@ -38,17 +37,26 @@ function onChannelMessage(msg, sender, channel)
     text = string.lower(msg)
     kind = determineMessageKind(text)
 
-    if kind == "LFM" then
+    if kind == "LFM" or kind == "Possible" then
         instance = matchInstance(text)
         if not instance then
             print("could not match instance: " .. text)
         else
-            print("[" .. kind .."] " .. playerLink(sender) .. " " .. instance.Name .. " (" .. cleanText(msg, instance) .. ")")
+            line = "[" .. kind .. "] "
+            line = line .. playerLink(sender) .. " "
+            line = line .. instance.Name .. " "
+
+            -- todo: check length
+            rest = cleanText(msg, instance)
+            line = line .. "(" .. rest .. ")"
+
+            print(line)
         end
     end
 
 
-    if (kind == "LFG" and showLfg) or (kind == "LFM" and showLfm) or kind=="Possible" then
+    if kind == "LFG" and LFG_ShowLfg then
+        print("[LFG] " .. playerLink(sender) .. " " .. msg)
     end
 end
 
@@ -70,7 +78,7 @@ function determineMessageKind(text)
 end
 
 function playerLink(name)
-    link = "|cffffc0c0|Hplayer:" .. name .. "|h[" .. name .. "]|h|r";
+    local link = "|cffffc0c0|Hplayer:" .. name .. "|h[" .. name .. "]|h|r";
     return string.gsub(link, "|", "\124")
 end
 
@@ -96,5 +104,23 @@ end
 function findClasses(text)
     -- parse classes/roles from message
     -- return list
-end
+    local found = false
+    local classes = { }
 
+    if string.find(text, "tank") then
+        table.insert(classes, "Tank")
+        found = true
+    end
+
+    if string.find(text, "dps") or string.find(text, "%s+dd") then
+        table.insert(classes, "DPS")
+        found = true
+    end
+
+    if string.find(text, "heal%s*") then
+        table.insert(classes, "Heal")
+        found = true
+    end
+
+    return found, classes
+end
